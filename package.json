@@ -1,0 +1,9 @@
+{
+  "name": "archridge-academy",
+  "version": "0.0.0",
+  "description": "Text adventure school game for English IV",
+  "main": "index.js",
+  "repository": "https://github.com/dskrenta/archridge-academy.git",
+  "author": "dskrenta <dskrenta@gmail.com>",
+  "license": "MIT"
+}
