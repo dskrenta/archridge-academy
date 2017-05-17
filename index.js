@@ -12,6 +12,36 @@ class ArchridgeAcademy {
         }
       },
       {
+        name: 'help',
+        func: (input) => {
+          console.log('Help!');
+        }
+      },
+      {
+        name: 'score',
+        func: (input) => {
+          console.log('Score!');
+        }
+      },
+      {
+        name: 'info',
+        func: (input) => {
+          console.log('Info!');
+        }
+      },
+      {
+        name: 'credits',
+        func: (input) => {
+          console.log('Credits!');
+        }
+      },
+      {
+        name: 'look',
+        func: (input) => {
+          console.log('Look!');
+        }
+      },
+      {
         name: 'quit',
         func: (input) => {
           console.log('Goodbye!');
