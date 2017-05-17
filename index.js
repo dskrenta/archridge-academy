@@ -8,7 +8,17 @@ class ArchridgeAcademy {
       {
         name: 'move',
         func: (input) => {
-          console.log('Move!');
+          const direction = input.match(/move(.*)/)[1].trim();
+          if (
+            direction === 'north' ||
+            direction === 'south' ||
+            direction === 'west' ||
+            direction === 'east'
+          ) {
+            console.log(`moved ${direction}`);
+          } else {
+            console.log(`You can't go ${direction}`);
+          }
         }
       },
       {
