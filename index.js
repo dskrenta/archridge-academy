@@ -1,7 +1,6 @@
 'use strict';
 
 const prompt = require('prompt');
-const art = require('ascii-art');
 const figlet = require('figlet');
 
 class ArchridgeAcademy {
@@ -44,7 +43,7 @@ class ArchridgeAcademy {
           const direction = input.match(/move(.*)/)[1].trim();
           if (direction in this.rooms[this.currentRoom].exits) {
             this.currentRoom = this.rooms[this.currentRoom].exits[direction];
-            console.log(`moved ${direction} into ${this.currentRoom}`);
+            console.log(this.rooms[this.currentRoom].description);
           } else {
             console.log(`You can't go ${direction}`);
           }
@@ -77,13 +76,14 @@ class ArchridgeAcademy {
       {
         name: 'look',
         func: (input) => {
+          const imgUrl = this.rooms[this.currentRoom].image;
           console.log('Look!');
         }
       },
       {
         name: 'quit',
-        func: (input) => {
-          console.log('Goodbye!');
+        func: async (input) => {
+          await this.bannerText('Goodbye!');
           process.exit();
         }
       }
@@ -108,7 +108,7 @@ class ArchridgeAcademy {
         if (err) {
           reject(err);
         } else {
-          console.log(data);
+          console.log(`\n${data}`);
           resolve(data);
         }
       })
