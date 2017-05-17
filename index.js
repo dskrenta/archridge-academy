@@ -4,18 +4,44 @@ const prompt = require('prompt');
 class ArchridgeAcademy {
   constructor() {
     this.playerName = 'David';
+    this.currentRoom = 'room1';
+    this.rooms = {
+      room1: {
+        name: 'Room 1',
+        description: 'Room 1 description',
+        image: 'http://someurl.com',
+        exits: {
+          west: 'room2',
+          east: 'room3'
+        }
+      },
+      room2: {
+        name: 'Room 1',
+        description: 'Room 2 description',
+        image: 'http://someurl.com',
+        exits: {
+          north: 'room1',
+          east: 'room3'
+        }
+      },
+      room3: {
+        name: 'Room 1',
+        description: 'Room 3 description',
+        image: 'http://someurl.com',
+        exits: {
+          west: 'room2',
+          east: 'room1'
+        }
+      }
+    };
     this.actions = [
       {
         name: 'move',
         func: (input) => {
           const direction = input.match(/move(.*)/)[1].trim();
-          if (
-            direction === 'north' ||
-            direction === 'south' ||
-            direction === 'west' ||
-            direction === 'east'
-          ) {
-            console.log(`moved ${direction}`);
+          if (direction in this.rooms[this.currentRoom].exits) {
+            this.currentRoom = this.rooms[this.currentRoom].exits[direction];
+            console.log(`moved ${direction} into ${this.currentRoom}`);
           } else {
             console.log(`You can't go ${direction}`);
           }
