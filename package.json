@@ -7,6 +7,9 @@
   "author": "dskrenta <dskrenta@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "ascii-art": "^1.4.2",
+    "canvas": "^1.6.5",
+    "figlet": "^1.2.0",
     "prompt": "^1.0.0"
   }
 }

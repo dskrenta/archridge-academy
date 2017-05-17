@@ -1,5 +1,8 @@
 'use strict';
+
 const prompt = require('prompt');
+const art = require('ascii-art');
+const figlet = require('figlet');
 
 class ArchridgeAcademy {
   constructor() {
@@ -85,8 +88,31 @@ class ArchridgeAcademy {
         }
       }
     ];
-    prompt.start();
-    this.gamePrompt();
+
+    this.main();
+  }
+
+  async main() {
+    try {
+      await this.bannerText('Welcome to Archridge Academy!');
+      prompt.start();
+      this.gamePrompt();
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  bannerText(text) {
+    return new Promise((resolve, reject) => {
+      figlet(text, (err, data) => {
+        if (err) {
+          reject(err);
+        } else {
+          console.log(data);
+          resolve(data);
+        }
+      })
+    });
   }
 
   gamePrompt() {
