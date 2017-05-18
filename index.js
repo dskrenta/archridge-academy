@@ -76,7 +76,7 @@ class ArchridgeAcademy {
       greenhouse: {
         name: 'Greenhouse',
         description: 'Greenhouse description',
-        image: 'https://68.media.tumblr.com/345e1124915b8fba0abed400d1e8d234/tumblr_og9xsuGs2d1t5gdomo1_500.jpg',
+        image: 'http://www.420nation.com/wp-content/uploads/2015/12/121115_Growing-Weed-the-Greenhouse-Way.jpg',
         exits: {
           west: 'hall2'
         }
