@@ -11,25 +11,25 @@ class ArchridgeAcademy {
       room1: {
         name: 'Room 1',
         description: 'Room 1 description',
-        image: 'http://someurl.com',
+        image: 'https://katyfarber.com/wp-content/uploads/2012/09/schools.jpg',
         exits: {
           west: 'room2',
           east: 'room3'
         }
       },
       room2: {
-        name: 'Room 1',
+        name: 'Room 2',
         description: 'Room 2 description',
-        image: 'http://someurl.com',
+        image: 'https://katyfarber.com/wp-content/uploads/2012/09/schools.jpg',
         exits: {
           north: 'room1',
           east: 'room3'
         }
       },
       room3: {
-        name: 'Room 1',
+        name: 'Room 3',
         description: 'Room 3 description',
-        image: 'http://someurl.com',
+        image: 'https://katyfarber.com/wp-content/uploads/2012/09/schools.jpg',
         exits: {
           west: 'room2',
           east: 'room1'
@@ -41,9 +41,10 @@ class ArchridgeAcademy {
         name: 'move',
         func: (input) => {
           const direction = input.match(/move(.*)/)[1].trim();
-          if (direction in this.rooms[this.currentRoom].exits) {
-            this.currentRoom = this.rooms[this.currentRoom].exits[direction];
-            console.log(this.rooms[this.currentRoom].description);
+          const currentRoom = this.rooms[this.currentRoom];
+          if (direction in currentRoom.exits) {
+            this.currentRoom = currentRoom.exits[direction];
+            console.log(currentRoom.description);
           } else {
             console.log(`You can't go ${direction}`);
           }
@@ -75,9 +76,11 @@ class ArchridgeAcademy {
       },
       {
         name: 'look',
-        func: (input) => {
+        func: async (input) => {
           const imgUrl = this.rooms[this.currentRoom].image;
-          console.log('Look!');
+          const convertedImage = await this.convertImage(imgUrl);
+          console.log(convertedImage);
+          // console.log('Look!');
         }
       },
       {
@@ -99,6 +102,14 @@ class ArchridgeAcademy {
     } catch (err) {
       console.error(err);
     }
+  }
+
+  convertImage(imgUrl) {
+    return new Promise((resolve, reject) => {
+      imageToAscii(imgUrl, {colored: false}, (err, converted) => {
+        err ? reject(err) : resolve(converted);
+      });
+    });
   }
 
   bannerText(text) {
