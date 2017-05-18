@@ -10,7 +10,7 @@ class ArchridgeAcademy {
     this.rooms = {
       school: {
         name: 'School Entrance',
-        description: 'Room 1 description',
+        description: 'School description',
         image: 'https://katyfarber.com/wp-content/uploads/2012/09/schools.jpg',
         exits: {
           north: 'hall1',
@@ -265,6 +265,22 @@ class ArchridgeAcademy {
         func: async (input) => {
           await this.bannerText('Goodbye!');
           process.exit();
+        }
+      },
+      {
+        name: 'exits',
+        func: (input) => {
+          const exits = this.rooms[this.currentRoom].exits;
+          const rows = [];
+          for (let exit in exits) {
+            rows.push([exit, this.rooms[exits[exit]].description]);
+          }
+          const exitsTable = AsciiTable.factory({
+            title: 'Exits',
+            heading: ['Direction', 'Description'],
+            rows: rows
+          });
+          console.log(exitsTable.toString());
         }
       }
     ];
