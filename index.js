@@ -5,7 +5,6 @@ const imageToAscii = require('image-to-ascii');
 
 class ArchridgeAcademy {
   constructor() {
-    this.playerName = 'David';
     this.currentRoom = 'room1';
     this.rooms = {
       room1: {
@@ -20,7 +19,7 @@ class ArchridgeAcademy {
       room2: {
         name: 'Room 2',
         description: 'Room 2 description',
-        image: 'https://katyfarber.com/wp-content/uploads/2012/09/schools.jpg',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
         exits: {
           north: 'room1',
           east: 'room3'
@@ -29,7 +28,7 @@ class ArchridgeAcademy {
       room3: {
         name: 'Room 3',
         description: 'Room 3 description',
-        image: 'https://katyfarber.com/wp-content/uploads/2012/09/schools.jpg',
+        image: 'http://i.dailymail.co.uk/i/pix/2014/06/20/article-0-1EEE985C00000578-468_964x647.jpg',
         exits: {
           west: 'room2',
           east: 'room1'
@@ -44,7 +43,7 @@ class ArchridgeAcademy {
           const currentRoom = this.rooms[this.currentRoom];
           if (direction in currentRoom.exits) {
             this.currentRoom = currentRoom.exits[direction];
-            console.log(currentRoom.description);
+            console.log(this.rooms[this.currentRoom].description);
           } else {
             console.log(`You can't go ${direction}`);
           }
@@ -106,7 +105,7 @@ class ArchridgeAcademy {
 
   convertImage(imgUrl) {
     return new Promise((resolve, reject) => {
-      imageToAscii(imgUrl, {colored: false}, (err, converted) => {
+      imageToAscii(imgUrl, {colored: true}, (err, converted) => {
         err ? reject(err) : resolve(converted);
       });
     });
