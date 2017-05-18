@@ -7,6 +7,7 @@
   "author": "dskrenta <dskrenta@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "ascii-table": "^0.0.9",
     "figlet": "^1.2.0",
     "image-to-ascii": "^3.0.7",
     "prompt": "^1.0.0"

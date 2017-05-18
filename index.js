@@ -2,6 +2,7 @@
 
 const figlet = require('figlet');
 const imageToAscii = require('image-to-ascii');
+const AsciiTable = require('ascii-table');
 
 class ArchridgeAcademy {
   constructor() {
@@ -52,7 +53,7 @@ class ArchridgeAcademy {
       {
         name: 'help',
         func: (input) => {
-          console.log('Help!');
+          this.help();
         }
       },
       {
@@ -64,13 +65,13 @@ class ArchridgeAcademy {
       {
         name: 'info',
         func: (input) => {
-          console.log('Info!');
+          this.info();
         }
       },
       {
         name: 'credits',
         func: (input) => {
-          console.log('Credits!');
+          this.credits();
         }
       },
       {
@@ -79,7 +80,6 @@ class ArchridgeAcademy {
           const imgUrl = this.rooms[this.currentRoom].image;
           const convertedImage = await this.convertImage(imgUrl);
           console.log(convertedImage);
-          // console.log('Look!');
         }
       },
       {
@@ -101,6 +101,37 @@ class ArchridgeAcademy {
     } catch (err) {
       console.error(err);
     }
+  }
+
+  info() {
+    console.log('info');
+  }
+
+  credits() {
+    const creditsTable = new AsciiTable('Help')
+      .setHeading('Person', 'Role')
+      .addRow('David', 'Programmer')
+      .addRow('Alex', 'Writer')
+      .addRow('Pedro', 'Designer')
+      .addRow('Serene', 'Interior Visuals')
+      .addRow('Hannah', 'Interior Visuals')
+      .addRow('Bryce', 'Writer & Interior Visuals')
+      .addRow('Tino', 'Writer & Interior Visuals')
+      .addRow('Luis', 'Writer & Interior Visuals')
+    console.log(creditsTable.toString());
+  }
+
+  help() {
+    const helpTable = new AsciiTable('Help')
+      .setHeading('Command', 'Definition')
+      .addRow('quit', 'Exit the game')
+      .addRow('help', 'Display possible commands')
+      .addRow('move', 'Move [north|east|south|west]')
+      .addRow('look', 'Generate a visual of the current room')
+      .addRow('score', 'Display current score')
+      .addRow('info', 'Display information about the school')
+      .addRow('credits', 'Display the credits for the game');
+    console.log(helpTable.toString());
   }
 
   convertImage(imgUrl) {
@@ -148,7 +179,6 @@ class ArchridgeAcademy {
     }
   }
 
-  // change to async function
   gameLogic(input) {
     let performAction = false;
 

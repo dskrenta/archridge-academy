@@ -25,6 +25,10 @@ array-series@~0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/array-series/-/array-series-0.1.5.tgz#df5d37bfc5c2ef0755e2aa4f92feae7d4b5a972f"
 
+ascii-table@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/ascii-table/-/ascii-table-0.0.9.tgz#06a6604d6a55d4bf41a9a47d9872d7a78da31e73"
+
 asciify-pixel-matrix@^1.0.0:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/asciify-pixel-matrix/-/asciify-pixel-matrix-1.0.8.tgz#05cd6af62e4c94ef4a005cd1fda63b55545a3a78"
