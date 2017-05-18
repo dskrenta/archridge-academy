@@ -1,6 +1,5 @@
 'use strict';
 
-const prompt = require('prompt');
 const figlet = require('figlet');
 const imageToAscii = require('image-to-ascii');
 
@@ -96,7 +95,6 @@ class ArchridgeAcademy {
   async main() {
     try {
       await this.bannerText('Welcome to Archridge Academy!');
-      prompt.start();
       this.gamePrompt();
     } catch (err) {
       console.error(err);
@@ -109,17 +107,35 @@ class ArchridgeAcademy {
         if (err) {
           reject(err);
         } else {
-          console.log(`\n${data}`);
+          console.log(`${data}`);
           resolve(data);
         }
       })
     });
   }
 
-  gamePrompt() {
-    return prompt.get(this.playerName, (error, result) => {
-      this.gameLogic(result[this.playerName]);
+  prompt(prompt) {
+    return new Promise((resolve, reject) => {
+      const stdin = process.stdin;
+      const stdout = process.stdout;
+      const displayPrompt = prompt || '';
+
+      stdin.resume();
+      stdout.write(displayPrompt);
+
+      stdin.once('data', function (data) {
+        resolve(data.toString().trim());
+      });
     });
+  }
+
+  async gamePrompt() {
+    try {
+      const input = await this.prompt();
+      this.gameLogic(input);
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   // change to async function
