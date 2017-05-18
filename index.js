@@ -22,7 +22,7 @@ class ArchridgeAcademy {
       bus: {
         name: 'Bus',
         description: 'Bus description',
-        image: 'https://katyfarber.com/wp-content/uploads/2012/09/schools.jpg',
+        image: 'http://cdn.theatlantic.com/static/infocus/torn030512/t12_RTR2YT5T.jpg',
         exits: {
           north: 'school'
         }
@@ -30,7 +30,7 @@ class ArchridgeAcademy {
       hall1: {
         name: 'Hall 1',
         description: 'Hall 1 description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'http://coachfore.org/wp-content/uploads/2015/01/emptyschoolhallway.jpg',
         exits: {
           south: 'school',
           north: 'hall4',
@@ -41,7 +41,7 @@ class ArchridgeAcademy {
       cafeteria: {
         name: 'Cafeteria',
         description: 'Cafeteria description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'http://www.capecentralhigh.com/wp-content/uploads/2013/01/Trinity-Lutheran-School-cafeteria-03-14-2012_9557.jpg',
         exits: {
           west: 'hall1'
         }
@@ -49,7 +49,7 @@ class ArchridgeAcademy {
       bathroom: {
         name: 'Bathroom',
         description: 'Bathroom description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'http://s3.otherpeoplespixels.com/sites/27116/assets/2IV2kT81W3lD7XPu.jpg',
         exits: {
           east: 'hall1'
         }
@@ -57,7 +57,7 @@ class ArchridgeAcademy {
       hall2: {
         name: 'Hall 2',
         description: 'Hall 2 description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'http://www.takepart.com/sites/default/files/styles/tp_gallery_slide/public/132058436-itok=VRFlQi7X.jpg',
         exits: {
           west: 'school',
           north: 'hall5',
@@ -68,7 +68,7 @@ class ArchridgeAcademy {
       gym: {
         name: 'Gymnasium',
         description: 'Gymnasium description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/5/55/Old_Fashioned_Gym_%287981005513%29.jpg',
         exits: {
           north: 'hall2'
         }
@@ -76,7 +76,7 @@ class ArchridgeAcademy {
       greenhouse: {
         name: 'Greenhouse',
         description: 'Greenhouse description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'https://68.media.tumblr.com/345e1124915b8fba0abed400d1e8d234/tumblr_og9xsuGs2d1t5gdomo1_500.jpg',
         exits: {
           west: 'hall2'
         }
@@ -84,7 +84,7 @@ class ArchridgeAcademy {
       hall3: {
         name: 'Hall 3',
         description: 'Hall 3 description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'http://coachfore.org/wp-content/uploads/2015/01/emptyschoolhallway.jpg',
         exits: {
           east: 'school',
           north: 'hall6',
@@ -95,7 +95,7 @@ class ArchridgeAcademy {
       music: {
         name: 'Music Hall',
         description: 'Music Hall description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'http://www.britishschoolmanila.org/staging/sites/default/files/Senior%20Music%20Room.png',
         exits: {
           north: 'hall3'
         }
@@ -103,7 +103,7 @@ class ArchridgeAcademy {
       auditorium: {
         name: 'Auditorium',
         description: 'Auditorium description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'http://detroiturbex.com/content/schools/hphs/img/39.jpg',
         exits: {
           east: 'hall3'
         }
@@ -111,7 +111,7 @@ class ArchridgeAcademy {
       hall4: {
         name: 'Hall 4',
         description: 'Hall 4 description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'http://coachfore.org/wp-content/uploads/2015/01/emptyschoolhallway.jpg',
         exits: {
           south: 'hall1',
           east: 'library',
@@ -122,7 +122,7 @@ class ArchridgeAcademy {
       library: {
         name: 'Library',
         description: 'Library description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'http://static.boredpanda.com/blog/wp-content/uploads/2016/03/trinity-college-long-room-library-dublin-12.jpg',
         exits: {
           west: 'hall4'
         }
@@ -130,7 +130,7 @@ class ArchridgeAcademy {
       hall5: {
         name: 'Hall 5',
         description: 'Hall 5 description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'http://coachfore.org/wp-content/uploads/2015/01/emptyschoolhallway.jpg',
         exits: {
           south: 'hall2',
           east: 'play',
@@ -141,7 +141,7 @@ class ArchridgeAcademy {
       play: {
         name: 'Playground',
         description: 'Playground description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'http://www.cobwebstudios.com/cws_372_03_COPYRIGHT.gif',
         exits: {
           west: 'hall5'
         }
@@ -149,7 +149,7 @@ class ArchridgeAcademy {
       hall6: {
         name: 'Hall 6',
         description: 'Hall 6 description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'http://coachfore.org/wp-content/uploads/2015/01/emptyschoolhallway.jpg',
         exits: {
           south: 'hall3',
           east: 'class5',
@@ -160,7 +160,7 @@ class ArchridgeAcademy {
       class1: {
         name: 'Class 1',
         description: 'Class 1 description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'https://nebula.wsimg.com/924cecbb554acdb61d8d5b88fb7128b8?AccessKeyId=FB49ADE8D2724A03FDB0&disposition=0&alloworigin=1',
         exits: {
           south: 'hall4'
         }
@@ -168,7 +168,7 @@ class ArchridgeAcademy {
       class2: {
         name: 'Class 2',
         description: 'Class 2 description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'https://images.fineartamerica.com/images-medium-large-5/victorian-old-west-classroom-daniel-hagerman.jpg',
         exits: {
           east: 'hall4'
         }
@@ -176,7 +176,7 @@ class ArchridgeAcademy {
       class3: {
         name: 'Class 3',
         description: 'Class 3 description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'https://c1.staticflickr.com/4/3654/3659802019_682024f8e4.jpg',
         exits: {
           south: 'hall5'
         }
@@ -184,7 +184,7 @@ class ArchridgeAcademy {
       class4: {
         name: 'Class 4',
         description: 'Class 4 description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'https://c.tribune.com.pk/2011/01/school1-640x480.jpg',
         exits: {
           east: 'hall5'
         }
@@ -192,7 +192,7 @@ class ArchridgeAcademy {
       class5: {
         name: 'Class 5',
         description: 'Class 5 description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'https://nebula.wsimg.com/924cecbb554acdb61d8d5b88fb7128b8?AccessKeyId=FB49ADE8D2724A03FDB0&disposition=0&alloworigin=1',
         exits: {
           west: 'hall6'
         }
@@ -200,7 +200,7 @@ class ArchridgeAcademy {
       class6: {
         name: 'Class 6',
         description: 'Class 6 description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'https://c.tribune.com.pk/2011/01/school1-640x480.jpg',
         exits: {
           south: 'hall6'
         }
@@ -208,7 +208,7 @@ class ArchridgeAcademy {
       class7: {
         name: 'Class 7',
         description: 'Class 7 description',
-        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        image: 'https://images.fineartamerica.com/images-medium-large-5/victorian-old-west-classroom-daniel-hagerman.jpg',
         exits: {
           east: 'hall6'
         }
@@ -231,7 +231,17 @@ class ArchridgeAcademy {
       {
         name: 'help',
         func: (input) => {
-          this.help();
+          const helpTable = new AsciiTable('Help')
+            .setHeading('Command', 'Definition')
+            .addRow('quit', 'Exit the game')
+            .addRow('help', 'Display possible commands')
+            .addRow('move', 'Move [north|east|south|west]')
+            .addRow('look', 'Generate a visual of the current room')
+            .addRow('score', 'Display current score')
+            .addRow('info', 'Display information about the school')
+            .addRow('credits', 'Display the credits for the game')
+            .addRow('exits', 'Display all possible exits');
+          console.log(helpTable.toString());
         }
       },
       {
@@ -249,7 +259,17 @@ class ArchridgeAcademy {
       {
         name: 'credits',
         func: (input) => {
-          this.credits();
+          const creditsTable = new AsciiTable('Help')
+            .setHeading('Person', 'Role')
+            .addRow('David', 'Programmer')
+            .addRow('Alex', 'Writer')
+            .addRow('Pedro', 'Designer')
+            .addRow('Serene', 'Interior Visuals')
+            .addRow('Hannah', 'Interior Visuals')
+            .addRow('Bryce', 'Writer & Interior Visuals')
+            .addRow('Tino', 'Writer & Interior Visuals')
+            .addRow('Luis', 'Writer & Interior Visuals')
+          console.log(creditsTable.toString());
         }
       },
       {
@@ -299,33 +319,6 @@ class ArchridgeAcademy {
 
   info() {
     console.log('info');
-  }
-
-  credits() {
-    const creditsTable = new AsciiTable('Help')
-      .setHeading('Person', 'Role')
-      .addRow('David', 'Programmer')
-      .addRow('Alex', 'Writer')
-      .addRow('Pedro', 'Designer')
-      .addRow('Serene', 'Interior Visuals')
-      .addRow('Hannah', 'Interior Visuals')
-      .addRow('Bryce', 'Writer & Interior Visuals')
-      .addRow('Tino', 'Writer & Interior Visuals')
-      .addRow('Luis', 'Writer & Interior Visuals')
-    console.log(creditsTable.toString());
-  }
-
-  help() {
-    const helpTable = new AsciiTable('Help')
-      .setHeading('Command', 'Definition')
-      .addRow('quit', 'Exit the game')
-      .addRow('help', 'Display possible commands')
-      .addRow('move', 'Move [north|east|south|west]')
-      .addRow('look', 'Generate a visual of the current room')
-      .addRow('score', 'Display current score')
-      .addRow('info', 'Display information about the school')
-      .addRow('credits', 'Display the credits for the game');
-    console.log(helpTable.toString());
   }
 
   convertImage(imgUrl) {
