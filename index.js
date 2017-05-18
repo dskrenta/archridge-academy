@@ -2,6 +2,7 @@
 
 const prompt = require('prompt');
 const figlet = require('figlet');
+const imageToAscii = require('image-to-ascii');
 
 class ArchridgeAcademy {
   constructor() {
@@ -121,6 +122,7 @@ class ArchridgeAcademy {
     });
   }
 
+  // change to async function
   gameLogic(input) {
     let performAction = false;
 

@@ -2,6 +2,47 @@
 # yarn lockfile v1
 
 
+ansi-styles@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.0.0.tgz#5404e93a544c4fec7f048262977bebfe3155e0c1"
+  dependencies:
+    color-convert "^1.0.0"
+
+ansy@^1.0.0:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/ansy/-/ansy-1.0.9.tgz#cdf94dcd02cbc74c74782832f2cd9cdb880738e9"
+  dependencies:
+    ansi-styles "^3.0.0"
+    custom-return "^1.0.0"
+    supports-color "^3.1.2"
+    ul "^5.2.1"
+
+array-parallel@~0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/array-parallel/-/array-parallel-0.1.3.tgz#8f785308926ed5aa478c47e64d1b334b6c0c947d"
+
+array-series@~0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/array-series/-/array-series-0.1.5.tgz#df5d37bfc5c2ef0755e2aa4f92feae7d4b5a972f"
+
+asciify-pixel-matrix@^1.0.0:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/asciify-pixel-matrix/-/asciify-pixel-matrix-1.0.8.tgz#05cd6af62e4c94ef4a005cd1fda63b55545a3a78"
+  dependencies:
+    asciify-pixel "^1.0.0"
+    ul "^5.2.1"
+
+asciify-pixel@^1.0.0:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/asciify-pixel/-/asciify-pixel-1.2.8.tgz#12f36636e4ed214fe9c95bcae6d3b3e3fd4a5a34"
+  dependencies:
+    couleurs "^6.0.0"
+    deffy "^2.2.1"
+    pixel-bg "^1.0.0"
+    pixel-class "^1.0.0"
+    pixel-white-bg "^1.0.0"
+    ul "^5.2.1"
+
 async@~0.9.0:
   version "0.9.2"
   resolved "https://registry.yarnpkg.com/async/-/async-0.9.2.tgz#aea74d5e61c1f899613bf64bda66d4c78f2fd17d"
@@ -21,6 +62,20 @@ brace-expansion@^1.1.7:
     balanced-match "^0.4.1"
     concat-map "0.0.1"
 
+cb-buffer@^2.0.0:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/cb-buffer/-/cb-buffer-2.1.3.tgz#da7d90d8713955fc0ce0d44ac4e2c6a58b5bda32"
+
+color-convert@^1.0.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.0.tgz#1accf97dd739b983bf994d56fec8f95853641b7a"
+  dependencies:
+    color-name "^1.1.1"
+
+color-name@^1.1.1:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.2.tgz#5c8ab72b64bd2215d617ae9559ebb148475cf98d"
+
 colors@1.0.x:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.0.3.tgz#0433f44d809680fdeb60ed260f1b0c262e82a40b"
@@ -29,17 +84,71 @@ colors@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.1.2.tgz#168a4701756b6a7f51a12ce0c97bfa28c084ed63"
 
+compute-size@^1.0.1:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/compute-size/-/compute-size-1.0.7.tgz#85412c5de8f6a1decb355791da2c4a28a0d04acf"
+  dependencies:
+    fixed-or-percent "^1.0.0"
+    map-o "^2.0.1"
+    ul "^5.2.1"
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
+
+couleurs@^6.0.0:
+  version "6.0.8"
+  resolved "https://registry.yarnpkg.com/couleurs/-/couleurs-6.0.8.tgz#3eb262dcef51b83646186e3a2a2b6e43f0adf2ff"
+  dependencies:
+    ansy "^1.0.0"
+    color-convert "^1.0.0"
+    iterate-object "^1.3.1"
+    typpy "^2.3.1"
+
+cross-spawn@^4.0.0:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-4.0.2.tgz#7b9247621c23adfdd3856004a823cbe397424d41"
+  dependencies:
+    lru-cache "^4.0.1"
+    which "^1.2.9"
+
+custom-return@^1.0.0:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/custom-return/-/custom-return-1.0.6.tgz#2cbc34426a44b2ed0e7d3fa03f2f85d65e7cb435"
+  dependencies:
+    noop6 "^1.0.0"
 
 cycle@1.0.x:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/cycle/-/cycle-1.0.3.tgz#21e80b2be8580f98b468f379430662b046c34ad2"
 
+debug@^2.2.0, debug@~2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
+  dependencies:
+    ms "0.7.1"
+
 deep-equal@~0.2.1:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-0.2.2.tgz#84b745896f34c684e98f2ce0e42abaf43bba017d"
+
+deffy@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/deffy/-/deffy-2.0.0.tgz#f82e08eea518c4a0a30b1f03ec504d248af28932"
+  dependencies:
+    typpy "^2.0.0"
+
+deffy@^2.2.1, deffy@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/deffy/-/deffy-2.2.2.tgz#088f40913cb47078653fa6f697c206e03471d523"
+  dependencies:
+    typpy "^2.0.0"
+
+err@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/err/-/err-1.1.1.tgz#eb928e2e11a316648f782833d0f97258ba43c2f8"
+  dependencies:
+    typpy "^2.2.0"
 
 eyes@0.1.x:
   version "0.1.8"
@@ -49,9 +158,29 @@ figlet@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/figlet/-/figlet-1.2.0.tgz#6c46537378fab649146b5a6143dda019b430b410"
 
+fixed-or-percent@^1.0.0:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/fixed-or-percent/-/fixed-or-percent-1.0.7.tgz#8b36cdbb69858ff8375f5446da3f2c9fec8ce9f1"
+  dependencies:
+    is-percent "^1.0.1"
+    percent-value "^1.0.0"
+
+follow-redirects@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-0.2.0.tgz#e0229d7a388bb5ff7b29f44fc1e1b62e921272df"
+  dependencies:
+    debug "^2.2.0"
+    stream-consume "^0.1.0"
+
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
+
+function.name@^1.0.3:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/function.name/-/function.name-1.0.8.tgz#d11c12e4a7dfa7de7c71d9c504567083bb6be05b"
+  dependencies:
+    noop6 "^1.0.1"
 
 glob@^7.0.5:
   version "7.1.1"
@@ -64,9 +193,68 @@ glob@^7.0.5:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
+gm-installed@^1.0.0:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/gm-installed/-/gm-installed-1.0.6.tgz#2897f1e3cb886537f051005750d37390141608ed"
+  dependencies:
+    prgm-installed "^1.0.1"
+
+gm-tools@^1.0.0:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/gm-tools/-/gm-tools-1.0.7.tgz#bb680660e72e0204c6f1ff4d9faaf8ac8979ec2c"
+  dependencies:
+    gm "^1.21.1"
+    iterate-object "^1.3.1"
+    pixel-class "^1.0.0"
+    pngjs "^2.2.0"
+    same-time "^2.3.1"
+
+gm@^1.21.1:
+  version "1.23.0"
+  resolved "https://registry.yarnpkg.com/gm/-/gm-1.23.0.tgz#80a2fe9cbf131515024846444658461269f52661"
+  dependencies:
+    array-parallel "~0.1.3"
+    array-series "~0.1.5"
+    cross-spawn "^4.0.0"
+    debug "~2.2.0"
+
+has-flag@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-1.0.0.tgz#9d9e793165ce017a00f00418c43f942a7b1d11fa"
+
 i@0.3.x:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/i/-/i-0.3.5.tgz#1d2b854158ec8169113c6cb7f6b6801e99e211d5"
+
+image-parser@^1.0.0:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/image-parser/-/image-parser-1.2.4.tgz#11c9bcda2623cad92807b004954e079b8b489963"
+  dependencies:
+    cb-buffer "^2.0.0"
+    err "^1.1.1"
+    gm-tools "^1.0.0"
+    lwipify "^2.0.0"
+    noop6 "^1.0.4"
+    pixel-class "^1.0.0"
+
+image-to-ascii@^3.0.7:
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/image-to-ascii/-/image-to-ascii-3.0.7.tgz#7f314330399f74ec8494dbdd06940d1ff71413f5"
+  dependencies:
+    asciify-pixel-matrix "^1.0.0"
+    compute-size "^1.0.1"
+    image-parser "^1.0.0"
+    imgpx "^1.0.2"
+    one-by-one "^3.1.0"
+    terminal-char-width "^1.0.0"
+    ul "^5.2.1"
+
+imgpx@^1.0.2:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/imgpx/-/imgpx-1.0.9.tgz#0ec3524872144db5865237366fd3213eeac74ce6"
+  dependencies:
+    lwip-pixels "^1.0.0"
+    lwipify "^2.0.0"
 
 inflight@^1.0.4:
   version "1.0.6"
@@ -79,9 +267,72 @@ inherits@2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
+is-percent@^1.0.1:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/is-percent/-/is-percent-1.0.8.tgz#7432184aea3b965912221e1a5e25efebe5820a79"
+  dependencies:
+    last-char "^1.3.1"
+
+is-ssh@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/is-ssh/-/is-ssh-1.3.0.tgz#ebea1169a2614da392a63740366c3ce049d8dff6"
+  dependencies:
+    protocols "^1.1.0"
+
+is-windows@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/is-windows/-/is-windows-0.1.1.tgz#be310715431cfabccc54ab3951210fa0b6d01abe"
+
+isexe@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
+
 isstream@0.1.x:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
+
+iterate-object@^1.3.0, iterate-object@^1.3.1:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/iterate-object/-/iterate-object-1.3.2.tgz#24ec15affa5d0039e8839695a21c2cae1f45b66b"
+
+last-char@^1.3.1:
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/last-char/-/last-char-1.3.7.tgz#7e343a549fafcf5c176d30c74f74d7aab9d64f6c"
+
+lru-cache@^4.0.1:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.0.2.tgz#1d17679c069cda5d040991a09dbc2c0db377e55e"
+  dependencies:
+    pseudomap "^1.0.1"
+    yallist "^2.0.0"
+
+lwip-pixels@^1.0.0:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/lwip-pixels/-/lwip-pixels-1.1.6.tgz#d46f0d4fc9e901e511ee73aabde673f8c7d098b0"
+  dependencies:
+    pixel-class "^1.0.0"
+
+lwip2@^1.0.0:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/lwip2/-/lwip2-1.0.10.tgz#172ec6b0ef894effcbdfc688105e4f129faadf97"
+  dependencies:
+    err "^1.1.1"
+    gm-installed "^1.0.0"
+
+lwipify@^2.0.0:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/lwipify/-/lwipify-2.0.8.tgz#612e92fa87c7b0f633aeee4f35b0c0068a4f7020"
+  dependencies:
+    lwip2 "^1.0.0"
+    noop6 "^1.0.1"
+    tinyreq "^3.1.4"
+    url-remote "^1.1.0"
+
+map-o@^2.0.1:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/map-o/-/map-o-2.0.7.tgz#7b59395ee87a5200ec2ef881938e9e257f747d61"
+  dependencies:
+    iterate-object "^1.3.0"
 
 minimatch@^3.0.2:
   version "3.0.4"
@@ -99,6 +350,10 @@ mkdirp@0.x.x:
   dependencies:
     minimist "0.0.8"
 
+ms@0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
+
 mute-stream@~0.0.4:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
@@ -107,15 +362,61 @@ ncp@1.0.x:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ncp/-/ncp-1.0.1.tgz#d15367e5cb87432ba117d2bf80fdf45aecfb4246"
 
+noop6@^1.0.0, noop6@^1.0.1, noop6@^1.0.4:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/noop6/-/noop6-1.0.6.tgz#eb2b6b5ee1248a02838ee0cea12e8dd5caaf849b"
+
+obj-def@^1.0.0:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/obj-def/-/obj-def-1.0.5.tgz#b2f23f9c70ca97a846e0b3b9591640e318dadfa3"
+  dependencies:
+    deffy "^2.2.2"
+
 once@^1.3.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
   dependencies:
     wrappy "1"
 
+one-by-one@^3.1.0:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/one-by-one/-/one-by-one-3.2.5.tgz#341139177af59d19cdd51e278851e18b25ce1ba0"
+  dependencies:
+    obj-def "^1.0.0"
+    sliced "^1.0.1"
+
+parse-url@^1.3.0:
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/parse-url/-/parse-url-1.3.7.tgz#636cb6e32b88255c704e30ab4349676703267af8"
+  dependencies:
+    is-ssh "^1.3.0"
+    protocols "^1.4.0"
+
 path-is-absolute@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
+
+percent-value@^1.0.0:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/percent-value/-/percent-value-1.0.6.tgz#008791bbb20b38be6a890388acdd28f3b229179d"
+
+pixel-bg@^1.0.0:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/pixel-bg/-/pixel-bg-1.0.7.tgz#30aa7abc498bf0ab69c2be6a21f435b08cd91b57"
+  dependencies:
+    pixel-class "^1.0.0"
+
+pixel-class@^1.0.0:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/pixel-class/-/pixel-class-1.0.6.tgz#91fc09ca76af7f2d7fb00b717ce41284b9ca36bf"
+  dependencies:
+    deffy "^2.2.1"
+
+pixel-white-bg@^1.0.0:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/pixel-white-bg/-/pixel-white-bg-1.0.6.tgz#0f04a9e0aea7f14bb9c4fd9b557aee27d226ddf3"
+  dependencies:
+    pixel-bg "^1.0.0"
 
 pkginfo@0.3.x:
   version "0.3.1"
@@ -124,6 +425,16 @@ pkginfo@0.3.x:
 pkginfo@0.x.x:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/pkginfo/-/pkginfo-0.4.0.tgz#349dbb7ffd38081fcadc0853df687f0c7744cd65"
+
+pngjs@^2.2.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-2.3.1.tgz#11d1e12b9cb64d63e30c143a330f4c1f567da85f"
+
+prgm-installed@^1.0.1:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/prgm-installed/-/prgm-installed-1.0.7.tgz#087f1e8b95bc6e22f4e99bad9e6b0f50b42ebc93"
+  dependencies:
+    which "^1.2.4"
 
 prompt@^1.0.0:
   version "1.0.0"
@@ -135,6 +446,14 @@ prompt@^1.0.0:
     revalidator "0.1.x"
     utile "0.3.x"
     winston "2.1.x"
+
+protocols@^1.1.0, protocols@^1.4.0:
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/protocols/-/protocols-1.4.5.tgz#21de1f441c4ef7094408ed9f1c94f7a114b87557"
+
+pseudomap@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
 
 read@1.0.x:
   version "1.0.7"
@@ -152,9 +471,67 @@ rimraf@2.x.x:
   dependencies:
     glob "^7.0.5"
 
+same-time@^2.3.1:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/same-time/-/same-time-2.3.3.tgz#8cb454c85c50e5e30132d8605d164305fca6c9af"
+  dependencies:
+    deffy "2.0.0"
+
+sliced@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/sliced/-/sliced-1.0.1.tgz#0b3a662b5d04c3177b1926bea82b03f837a2ef41"
+
 stack-trace@0.0.x:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/stack-trace/-/stack-trace-0.0.10.tgz#547c70b347e8d32b4e108ea1a2a159e5fdde19c0"
+
+stream-consume@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/stream-consume/-/stream-consume-0.1.0.tgz#a41ead1a6d6081ceb79f65b061901b6d8f3d1d0f"
+
+supports-color@^3.1.2:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-3.2.3.tgz#65ac0504b3954171d8a64946b2ae3cbb8a5f54f6"
+  dependencies:
+    has-flag "^1.0.0"
+
+terminal-char-width@^1.0.0:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/terminal-char-width/-/terminal-char-width-1.0.6.tgz#54dbc51341960aee6ea998d1363956d258706fb6"
+  dependencies:
+    is-windows "^0.1.1"
+
+tinyreq@^3.1.4:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/tinyreq/-/tinyreq-3.2.2.tgz#e743718f45420c2f1db4f6d82a32c05b16a7d651"
+  dependencies:
+    follow-redirects "^0.2.0"
+    ul "^5.0.0"
+
+typpy@^2.0.0, typpy@^2.2.0, typpy@^2.3.1, typpy@^2.3.4:
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/typpy/-/typpy-2.3.8.tgz#5dfc0a1e9b9e4f9287ef8fa94dce8aa18103e581"
+  dependencies:
+    function.name "^1.0.3"
+
+ul@^5.0.0, ul@^5.2.1:
+  version "5.2.11"
+  resolved "https://registry.yarnpkg.com/ul/-/ul-5.2.11.tgz#dc058e6cac4e2aae5f05b450784029d10212743b"
+  dependencies:
+    deffy "^2.2.2"
+    typpy "^2.3.4"
+
+url-local@^1.0.1:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/url-local/-/url-local-1.1.5.tgz#4fe9d66341d2ec7895435347c7a767a42d0db3d4"
+  dependencies:
+    parse-url "^1.3.0"
+
+url-remote@^1.1.0:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/url-remote/-/url-remote-1.1.5.tgz#3d03aebeb218c7cad8fa9c0e8c3d0e5106704867"
+  dependencies:
+    url-local "^1.0.1"
 
 utile@0.3.x:
   version "0.3.0"
@@ -166,6 +543,12 @@ utile@0.3.x:
     mkdirp "0.x.x"
     ncp "1.0.x"
     rimraf "2.x.x"
+
+which@^1.2.4, which@^1.2.9:
+  version "1.2.14"
+  resolved "https://registry.yarnpkg.com/which/-/which-1.2.14.tgz#9a87c4378f03e827cecaf1acdf56c736c01c14e5"
+  dependencies:
+    isexe "^2.0.0"
 
 winston@2.1.x:
   version "2.1.1"
@@ -182,3 +565,7 @@ winston@2.1.x:
 wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
+
+yallist@^2.0.0:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
