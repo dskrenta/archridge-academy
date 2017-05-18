@@ -6,33 +6,211 @@ const AsciiTable = require('ascii-table');
 
 class ArchridgeAcademy {
   constructor() {
-    this.currentRoom = 'room1';
+    this.currentRoom = 'school';
     this.rooms = {
-      room1: {
-        name: 'Room 1',
+      school: {
+        name: 'School Entrance',
         description: 'Room 1 description',
         image: 'https://katyfarber.com/wp-content/uploads/2012/09/schools.jpg',
         exits: {
-          west: 'room2',
-          east: 'room3'
+          north: 'hall1',
+          east: 'hall2',
+          west: 'hall3',
+          south: 'bus'
         }
       },
-      room2: {
-        name: 'Room 2',
-        description: 'Room 2 description',
+      bus: {
+        name: 'Bus',
+        description: 'Bus description',
+        image: 'https://katyfarber.com/wp-content/uploads/2012/09/schools.jpg',
+        exits: {
+          north: 'school'
+        }
+      },
+      hall1: {
+        name: 'Hall 1',
+        description: 'Hall 1 description',
         image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
         exits: {
-          north: 'room1',
-          east: 'room3'
+          south: 'school',
+          north: 'hall4',
+          west: 'bathroom',
+          east: 'cafeteria'
         }
       },
-      room3: {
-        name: 'Room 3',
-        description: 'Room 3 description',
-        image: 'http://i.dailymail.co.uk/i/pix/2014/06/20/article-0-1EEE985C00000578-468_964x647.jpg',
+      cafeteria: {
+        name: 'Cafeteria',
+        description: 'Cafeteria description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
         exits: {
-          west: 'room2',
-          east: 'room1'
+          west: 'hall1'
+        }
+      },
+      bathroom: {
+        name: 'Bathroom',
+        description: 'Bathroom description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          east: 'hall1'
+        }
+      },
+      hall2: {
+        name: 'Hall 2',
+        description: 'Hall 2 description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          west: 'school',
+          north: 'hall5',
+          south: 'gym',
+          east: 'greenhouse'
+        }
+      },
+      gym: {
+        name: 'Gymnasium',
+        description: 'Gymnasium description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          north: 'hall2'
+        }
+      },
+      greenhouse: {
+        name: 'Greenhouse',
+        description: 'Greenhouse description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          west: 'hall2'
+        }
+      },
+      hall3: {
+        name: 'Hall 3',
+        description: 'Hall 3 description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          east: 'school',
+          north: 'hall6',
+          south: 'music',
+          west: 'auditorium'
+        }
+      },
+      music: {
+        name: 'Music Hall',
+        description: 'Music Hall description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          north: 'hall3'
+        }
+      },
+      auditorium: {
+        name: 'Auditorium',
+        description: 'Auditorium description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          east: 'hall3'
+        }
+      },
+      hall4: {
+        name: 'Hall 4',
+        description: 'Hall 4 description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          south: 'hall1',
+          east: 'library',
+          north: 'class1',
+          west: 'class2',
+        }
+      },
+      library: {
+        name: 'Library',
+        description: 'Library description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          west: 'hall4'
+        }
+      },
+      hall5: {
+        name: 'Hall 5',
+        description: 'Hall 5 description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          south: 'hall2',
+          east: 'play',
+          north: 'class3',
+          west: 'class4'
+        }
+      },
+      play: {
+        name: 'Playground',
+        description: 'Playground description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          west: 'hall5'
+        }
+      },
+      hall6: {
+        name: 'Hall 6',
+        description: 'Hall 6 description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          south: 'hall3',
+          east: 'class5',
+          north: 'class6',
+          west: 'class7'
+        }
+      },
+      class1: {
+        name: 'Class 1',
+        description: 'Class 1 description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          south: 'hall4'
+        }
+      },
+      class2: {
+        name: 'Class 2',
+        description: 'Class 2 description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          east: 'hall4'
+        }
+      },
+      class3: {
+        name: 'Class 3',
+        description: 'Class 3 description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          south: 'hall5'
+        }
+      },
+      class4: {
+        name: 'Class 4',
+        description: 'Class 4 description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          east: 'hall5'
+        }
+      },
+      class5: {
+        name: 'Class 5',
+        description: 'Class 5 description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          west: 'hall6'
+        }
+      },
+      class6: {
+        name: 'Class 6',
+        description: 'Class 6 description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          south: 'hall6'
+        }
+      },
+      class7: {
+        name: 'Class 7',
+        description: 'Class 7 description',
+        image: 'http://www.charitiesnfplaw.com.au/files/2012/04/Old-school-building.jpg',
+        exits: {
+          east: 'hall6'
         }
       }
     };
