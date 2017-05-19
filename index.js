@@ -323,7 +323,7 @@ class ArchridgeAcademy {
 
   convertImage(imgUrl) {
     return new Promise((resolve, reject) => {
-      imageToAscii(imgUrl, {colored: true}, (err, converted) => {
+      imageToAscii(imgUrl, {colored: true, size: {width: 90}}, (err, converted) => {
         err ? reject(err) : resolve(converted);
       });
     });
