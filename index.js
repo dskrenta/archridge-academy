@@ -250,7 +250,7 @@ class ArchridgeAcademy {
           console.log(`
             Archridge Academy is a project based learning style private school.
             All income for the school is generated through existing and current projects developed by students at Archridge.
-            Archridge is open to all high school students who have demonstrated an ability above that of the typical students with respec to certian spectrums.
+            Archridge is open to all high school students who have demonstrated an ability above that of the typical students with respect to certian spectrums.
             Archridge seeks out students with differing learning rates, abilities, styles, and skills in order to create project teams in which the students learn basic and complex problem solving skills.
             All students participate in the assembly of teams and projects which aim to solve issues facing the developing world.
             All regular course curriculum is taught through the student's chosen projects.
