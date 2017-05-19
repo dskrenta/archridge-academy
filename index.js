@@ -57,7 +57,7 @@ class ArchridgeAcademy {
       hall2: {
         name: 'Hall 2',
         description: 'Hall 2 description',
-        image: 'http://www.takepart.com/sites/default/files/styles/tp_gallery_slide/public/132058436-itok=VRFlQi7X.jpg',
+        image: 'http://static.boredpanda.com/blog/wp-content/uploads/2016/03/trinity-college-long-room-library-dublin-12.jpg',
         exits: {
           west: 'school',
           north: 'hall5',
@@ -103,7 +103,7 @@ class ArchridgeAcademy {
       auditorium: {
         name: 'Auditorium',
         description: 'In a much worse state than the cafeteria. Chairs are broken, and rubble covers most of the walkways. Holes appear in the ceiling, walls, and even in the floor. Tread carefully here.',
-        image: 'http://detroiturbex.com/content/schools/hphs/img/39.jpg',
+        image: 'https://s-media-cache-ak0.pinimg.com/736x/6c/e3/91/6ce39160d17486aa0cda5c183f6ae4ff.jpg',
         exits: {
           east: 'hall3'
         }
@@ -111,7 +111,7 @@ class ArchridgeAcademy {
       hall4: {
         name: 'Hall 4',
         description: 'Hall 4 description',
-        image: 'http://coachfore.org/wp-content/uploads/2015/01/emptyschoolhallway.jpg',
+        image: 'http://static.boredpanda.com/blog/wp-content/uploads/2016/03/trinity-college-long-room-library-dublin-12.jpg',
         exits: {
           south: 'hall1',
           east: 'library',
@@ -122,7 +122,7 @@ class ArchridgeAcademy {
       library: {
         name: 'Library',
         description: 'Library description',
-        image: 'http://static.boredpanda.com/blog/wp-content/uploads/2016/03/trinity-college-long-room-library-dublin-12.jpg',
+        image: 'https://static.wixstatic.com/media/922da6_dd9841dda4164a46b7b8ac4b00abefd6~mv2.jpg',
         exits: {
           west: 'hall4'
         }
@@ -141,7 +141,7 @@ class ArchridgeAcademy {
       play: {
         name: 'Playground',
         description: 'Playground description',
-        image: 'http://www.cobwebstudios.com/cws_372_03_COPYRIGHT.gif',
+        image: 'http://www.loriknutson.com/images/Musings/Playground.jpg',
         exits: {
           west: 'hall5'
         }
