@@ -84,7 +84,7 @@ class ArchridgeAcademy {
       },
       hall3: {
         name: 'Hall 3',
-        description: 'This hallway only contains that echoes of the long lost chior club.',
+        description: 'This hallway only contains that echoes of the long lost choir club.',
         image: 'hall1.jpg',
         exits: {
           east: 'school',
