@@ -12,7 +12,6 @@ class ArchridgeAcademy {
         name: 'School Entrance',
         description: 'Archridge Academy',
         image: 'https://img.buzzfeed.com/buzzfeed-static/static/enhanced/webdr06/2013/8/26/16/enhanced-buzz-wide-7742-1377549191-11.jpg',
-        // image: 'https://katyfarber.com/wp-content/uploads/2012/09/schools.jpg',
         exits: {
           north: 'hall1',
           east: 'hall2',
@@ -238,23 +237,24 @@ class ArchridgeAcademy {
             .addRow('help', 'Display possible commands')
             .addRow('move', 'Move [north|east|south|west]')
             .addRow('look', 'Generate a visual of the current room')
-            .addRow('score', 'Display current score')
             .addRow('info', 'Display information about the school')
             .addRow('credits', 'Display the credits for the game')
-            .addRow('exits', 'Display all possible exits');
+            .addRow('exits', 'Display all possible exits')
+            .addRow('schedule', 'Display schedule');
           console.log(helpTable.toString());
-        }
-      },
-      {
-        name: 'score',
-        func: (input) => {
-          console.log('Score!');
         }
       },
       {
         name: 'info',
         func: (input) => {
-          this.info();
+          console.log(`
+            Archridge Academy is a project based learning style private school.
+            All income for the school is generated through existing and current projects developed by students at Archridge.
+            Archridge is open to all high school students who have demonstrated an ability above that of the typical students with respec to certian spectrums.
+            Archridge seeks out students with differing learning rates, abilities, styles, and skills in order to create project teams in which the students learn basic and complex problem solving skills.
+            All students participate in the assembly of teams and projects which aim to solve issues facing the developing world.
+            All regular course curriculum is taught through the student's chosen projects.
+          `);
         }
       },
       {
@@ -262,14 +262,14 @@ class ArchridgeAcademy {
         func: (input) => {
           const creditsTable = new AsciiTable('Help')
             .setHeading('Person', 'Role')
-            .addRow('David', 'Programmer')
-            .addRow('Alex', 'Writer')
+            .addRow('David', 'Programmer & Warden')
+            .addRow('Bryce', 'Game Engineer & Interior Visuals')
+            .addRow('Alex', 'Chief Content Creator')
             .addRow('Pedro', 'Designer & Propaganda Minister')
             .addRow('Serene', 'Interior Visuals')
             .addRow('Hannah', 'Interior Visuals')
-            .addRow('Bryce', 'Writer & Interior Visuals')
-            .addRow('Tino', 'Writer & Interior Visuals')
-            .addRow('Luis', 'Writer & Interior Visuals')
+            .addRow('Tino', 'Writer')
+            .addRow('Luis', 'Writer')
           console.log(creditsTable.toString());
         }
       },
@@ -303,6 +303,20 @@ class ArchridgeAcademy {
           });
           console.log(exitsTable.toString());
         }
+      },
+      {
+        name: 'schedule',
+        func: (input) => {
+          const scheduleTable = new AsciiTable('Schedule')
+            .setHeading('Section', 'Class', 'Start Time', 'End Time', 'Description')
+            .addRow(1, 'Project Development', '10:00 AM', '12:00 PM', 'Structured project development')
+            .addRow(2, 'Break', '12:00 PM', '1:30 PM', 'Optional break')
+            .addRow(3, 'Project Development', '1:30 PM', '3:00 PM', 'Unstructured project development')
+            .addRow(4, 'Industry Guests & Open Teacher Review', '3:00 PM', '4:00 PM', 'Networking, technological discovery, peer and teacher progress reviews')
+            .addRow(5, 'Break', '4:00 PM', '4:30 PM', 'Optional break')
+            .addRow(6, 'Intellectual Expansion', '4:30 PM', '5:00 PM', 'Expansion of critial thinking and problem solving skills')
+          console.log(scheduleTable.toString());
+        }
       }
     ];
 
@@ -312,15 +326,11 @@ class ArchridgeAcademy {
   async main() {
     try {
       await this.bannerText('Welcome to Archridge Academy!');
-      console.log('"The unrivaled utopia is a dystopia." - David Skrenta\n');
+      console.log('"The unrivaled utopia is a dystopia."\n');
       this.gamePrompt();
     } catch (err) {
       console.error(err);
     }
-  }
-
-  info() {
-    console.log('info');
   }
 
   convertImage(imgUrl) {
