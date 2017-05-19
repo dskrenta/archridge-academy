@@ -40,7 +40,7 @@ class ArchridgeAcademy {
       },
       cafeteria: {
         name: 'Cafeteria',
-        description: 'Cafeteria description',
+        description: 'Appears to be similar to those of other high schools. Tables, chairs and food are slightly astray, but it’s far from decrepit. Something is off, it could be that everything seems to be much older than appearance indicates. Whatever it is, you’ll want to get out of there as soon as possible.',
         image: 'http://www.capecentralhigh.com/wp-content/uploads/2013/01/Trinity-Lutheran-School-cafeteria-03-14-2012_9557.jpg',
         exits: {
           west: 'hall1'
@@ -48,7 +48,7 @@ class ArchridgeAcademy {
       },
       bathroom: {
         name: 'Bathroom',
-        description: 'Bathroom description',
+        description: 'Relatively untouched. Stalls and toilets are in decent shape. There is some rubble, and the water pipes aren’t working perfectly, but the room is far from a hellhole.',
         image: 'http://s3.otherpeoplespixels.com/sites/27116/assets/2IV2kT81W3lD7XPu.jpg',
         exits: {
           east: 'hall1'
@@ -67,7 +67,7 @@ class ArchridgeAcademy {
       },
       gym: {
         name: 'Gymnasium',
-        description: 'Gymnasium description',
+        description: 'Physical education is an optional class for students because it is a private school. We have state of the art strength training equipment and sporting facilities available to all students during both class and recess periods. There are multiple versatile courts that can host a wide variety of sports.',
         image: 'https://upload.wikimedia.org/wikipedia/commons/5/55/Old_Fashioned_Gym_%287981005513%29.jpg',
         exits: {
           north: 'hall2'
@@ -75,7 +75,7 @@ class ArchridgeAcademy {
       },
       greenhouse: {
         name: 'Greenhouse',
-        description: 'Greenhouse description',
+        description: 'The f&ck, this school has a greenhouse! My school couldn’t even afford a music department! Anyways, the school’s greenhouse is overgrown with plants, and there appear to be animals somewhere in its depths. The sun is visible, and the room is much less creepy than the rest of school. You take a deep breath. Light mist clings to the warm air. The sounds of the rainforest surrounds you. But wait, aren’t you in a school?  ',
         image: 'http://www.420nation.com/wp-content/uploads/2015/12/121115_Growing-Weed-the-Greenhouse-Way.jpg',
         exits: {
           west: 'hall2'
@@ -102,7 +102,7 @@ class ArchridgeAcademy {
       },
       auditorium: {
         name: 'Auditorium',
-        description: 'Auditorium description',
+        description: 'In a much worse state than the cafeteria. Chairs are broken, and rubble covers most of the walkways. Holes appear in the ceiling, walls, and even in the floor. Tread carefully here.',
         image: 'http://detroiturbex.com/content/schools/hphs/img/39.jpg',
         exits: {
           east: 'hall3'
@@ -200,7 +200,7 @@ class ArchridgeAcademy {
       class6: {
         name: 'Class 6',
         description: 'Class 6 description',
-        image: 'http://www.invistaperforms.org/wp-content/uploads/2014/11/Classroom-Desks.jpg',
+        image: 'https://c.tribune.com.pk/2011/01/school1-640x480.jpg',
         exits: {
           south: 'hall6'
         }
@@ -222,7 +222,7 @@ class ArchridgeAcademy {
           const currentRoom = this.rooms[this.currentRoom];
           if (direction in currentRoom.exits) {
             this.currentRoom = currentRoom.exits[direction];
-            console.log(this.rooms[this.currentRoom].description);
+            console.log(`\n${this.rooms[this.currentRoom].description}\n`);
           } else {
             console.log(`You can't go ${direction}`);
           }
@@ -263,11 +263,11 @@ class ArchridgeAcademy {
             .setHeading('Person', 'Role')
             .addRow('David', 'Programmer')
             .addRow('Alex', 'Writer')
-            .addRow('Pedro', 'Designer')
+            .addRow('Pedro', 'Designer & Propaganda Minister')
             .addRow('Serene', 'Interior Visuals')
             .addRow('Hannah', 'Interior Visuals')
             .addRow('Bryce', 'Writer & Interior Visuals')
-            .addRow('Tino', 'Scheduler')
+            .addRow('Tino', 'Writer & Interior Visuals')
             .addRow('Luis', 'Writer & Interior Visuals')
           console.log(creditsTable.toString());
         }
@@ -293,7 +293,7 @@ class ArchridgeAcademy {
           const exits = this.rooms[this.currentRoom].exits;
           const rows = [];
           for (let exit in exits) {
-            rows.push([exit, this.rooms[exits[exit]].description]);
+            rows.push([exit, this.rooms[exits[exit]].name]);
           }
           const exitsTable = AsciiTable.factory({
             title: 'Exits',
@@ -323,7 +323,7 @@ class ArchridgeAcademy {
 
   convertImage(imgUrl) {
     return new Promise((resolve, reject) => {
-      imageToAscii(imgUrl, {colored: true}, (err, converted) => {
+      imageToAscii(imgUrl, {colored: true, size: {width: 90}}, (err, converted) => {
         err ? reject(err) : resolve(converted);
       });
     });
