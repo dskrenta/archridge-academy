@@ -311,6 +311,7 @@ class ArchridgeAcademy {
   async main() {
     try {
       await this.bannerText('Welcome to Archridge Academy!');
+      console.log('"The unrivaled utopia is a dystopia." - David Skrenta\n');
       this.gamePrompt();
     } catch (err) {
       console.error(err);
