@@ -130,7 +130,7 @@ class ArchridgeAcademy {
       },
       hall5: {
         name: 'Hall 5',
-        description: 'This id one of the most academic hallways in the Academy, leading to two distinct classes.',
+        description: 'This is one of the most academic hallways in the Academy, leading to two distinct classes.',
         image: 'hall2.jpg',
         exits: {
           south: 'hall2',
