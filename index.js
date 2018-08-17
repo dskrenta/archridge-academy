@@ -1,7 +1,9 @@
 'use strict';
 
 const figlet = require('figlet');
-const imageToAscii = require('image-to-ascii');
+// const imageToAscii = require('image-to-ascii');
+const size = require('window-size');
+const asciify = require('asciify-image');
 const AsciiTable = require('ascii-table');
 
 class ArchridgeAcademy {
@@ -335,10 +337,18 @@ class ArchridgeAcademy {
   }
 
   convertImage(img) {
+    /*
     return new Promise((resolve, reject) => {
       imageToAscii(`${this.imgPath}${img}`, {colored: true, size: {width: 90}}, (err, converted) => {
         err ? reject(err) : resolve(converted);
       });
+    });
+    */
+    return asciify(`${this.imgPath}${img}`, {
+      fit: 'box',
+      width: size.width, 
+      height: size.height - 1,
+      color: true
     });
   }
 
